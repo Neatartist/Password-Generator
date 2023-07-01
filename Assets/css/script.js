@@ -3,8 +3,13 @@ var numarray = ['1234567890']
 var arrayspecial = ['!@#$%^&*()_+']
 var Upperletter = ['ABCDEFGHIJKLMNOPQRSTUVWXYZ']
 var lowerletter = ['abcdefghijklmnopqrstuvwxyz']
+
 // assignment code
 var generateBtn = document.querySelector("#generate");
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
 // write password to the #password input
 function writePassword() {
   var password = generatePassword()
@@ -15,17 +20,21 @@ function writePassword() {
 function generatePassword() {
   var possiblepassword = '';
   var actualpassword = '';
+
+
   // requirements for password length
   var passwordlength = parseInt(prompt("A password is usually required to be between 8 and 12 characters. Enter how many characters you want yours to be.",8));
-  //
+  // if password length does not fall in the parameters
   if (isNaN (passwordlength)) {   
     alert("Please enter a number between 8 and 12.");
     return "Please enter a valid number.";
   }
+  // if password length is less than 8
   if (passwordlength < 8) {
     alert("Please enter a number between 8 and 12.");
     return "Please enter a valid number.";
   }
+  // if password length is greater than 12
   if (passwordlength > 12) {
     alert("Please enter a number between 8 and 12.");
     return "Please enter a valid number.";
@@ -58,4 +67,3 @@ function generatePassword() {
   } 
   return actualpassword;
 }
-generateBtn.addEventListener("click", writePassword);
