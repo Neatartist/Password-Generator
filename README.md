@@ -15,4 +15,4 @@ https://neatartist.github.io/Password-Generator/
 
 ## screenshot
 
-![Alt text](assets/images/03-javascript-homework-demo.png)
+![Alt text](assets/images/_C__Users_jvank_Documents_UCF_homework_Password-Generator_index.html.png)
